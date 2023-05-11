@@ -164,7 +164,7 @@ public class SwiftLiveActivitiesPlugin: NSObject, FlutterPlugin, FlutterStreamHa
         }
         
         let liveDeliveryAttributes = LiveActivitiesAppAttributes()
-        let initialContentState = LiveActivitiesAppAttributes.LiveDeliveryData(appGroupId: appGroupId!, currentStatus: 2)
+        let initialContentState = LiveActivitiesAppAttributes.LiveDeliveryData(appGroupId: appGroupId!, currentStatus: 1)
         
         do {
             let deliveryActivity = try Activity<LiveActivitiesAppAttributes>.request(
@@ -194,7 +194,7 @@ public class SwiftLiveActivitiesPlugin: NSObject, FlutterPlugin, FlutterStreamHa
                         }
                     }
                     
-                    let updatedStatus = LiveActivitiesAppAttributes.LiveDeliveryData(appGroupId: self.appGroupId!, currentStatus: 2)
+                    let updatedStatus = LiveActivitiesAppAttributes.LiveDeliveryData(appGroupId: self.appGroupId!, currentStatus: 1)
                     await activity.update(using: updatedStatus)
                     break;
                 }
