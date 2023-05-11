@@ -194,7 +194,7 @@ public class SwiftLiveActivitiesPlugin: NSObject, FlutterPlugin, FlutterStreamHa
                         }
                     }
                     
-                    let updatedStatus = LiveActivitiesAppAttributes.LiveDeliveryData(appGroupId: self.appGroupId!)
+                    let updatedStatus = LiveActivitiesAppAttributes.LiveDeliveryData(appGroupId: self.appGroupId!, currentStatus: 2)
                     await activity.update(using: updatedStatus)
                     break;
                 }
